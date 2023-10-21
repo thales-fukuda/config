@@ -1,0 +1,71 @@
+snippet clg "console.log"
+	console.log(${1:placeholder})
+	${0}
+
+snippet con "const"
+	const ${1:name} = ${2:value}
+	${0}
+
+snippet tcon "const typed"
+	const ${1:name}: ${2:any} = ${3:value};
+	${0}
+
+snippet let "let"
+	let ${1:name} = ${2:value}
+	${0}
+
+snippet tlet "let typed"
+	let ${1:name}: ${2: any} = ${3:value}
+
+snippet int "interface"
+	interface ${1: name} {
+		${2: value}: ${3: any}
+		${0}
+	}
+
+snippet intx "interface extends"
+	interface ${1: name} extends ${2:extend} {
+		${3: value}: ${4: any}
+		${0}
+	}
+
+snippet typ "type"
+	type ${1:name} = ${2:value}
+
+snippet at "field"
+	${1: value}: ${2:any}
+
+snippet fun "function" 
+	function ${1: name}(${2:value}: ${3: arg}) {
+		${0}
+	}
+
+snippet c=> "const arrow function"
+	const ${1:function_name} = (${2:value}: ${3:arg}) => {
+		${0:content}
+	}
+
+snippet => "arrow function"
+	(${1:value}) => {
+		${0}
+	}
+
+snippet if "if"
+	if (${1:value}) {
+		${0}
+	}
+
+snippet ifelse "if else"
+	if (${1:value}) {
+		${0}
+	} else {
+
+	}
+
+snippet map "map"
+	${1:arr}.map((${2:element}) => ${3:return})
+
+snippet foreach "foreach"
+	${1:arr}.forEach((${2:element}) => ${3:return})
+
+
