@@ -7,12 +7,18 @@ return {
 	{ 'hrsh7th/cmp-path' },
 	{ 'hrsh7th/cmp-cmdline' },
 	{ 'hrsh7th/nvim-cmp' },
-	{ 'L3MON4D3/LuaSnip' },
+	{
+		"L3MON4D3/LuaSnip",
+		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		-- install jsregexp (optional!).
+		build = "make install_jsregexp",
+		event="VeryLazy"
+	},
 	{ 'saadparwaiz1/cmp_luasnip' },
 	{
 		'windwp/nvim-autopairs',
 		event = "InsertEnter",
-		opts = {}
+		opts = {},
 	},
 	{ 'onsails/lspkind.nvim' },
 	{
@@ -46,6 +52,7 @@ return {
 		'smoka7/hop.nvim',
 		version = "*",
 		opts = {},
+		event = "VeryLazy"
 	},
 	{ 'nvim-tree/nvim-tree.lua' },
 	{

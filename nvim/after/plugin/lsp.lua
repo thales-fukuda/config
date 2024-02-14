@@ -18,6 +18,8 @@ lspconfig.prismals.setup {
 	capabilities = capabilities
 }
 
+lspconfig.gdscript.setup{}
+
 -- Lua
 lspconfig.lua_ls.setup {
 	capabilities = capabilities,

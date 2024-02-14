@@ -10,13 +10,14 @@ vim.keymap.set("n", "n", "nzzzv")       -- when searching mantain cursor in the 
 vim.keymap.set("n", "N", "Nzzzv")       -- when searchin mantain cursor in the middle
 
 -- COPY/PASTE/DELETE --
-vim.keymap.set("x", "<leader>p", [["_dP]])       -- when copy above selection send selection to void buffer and mantain copy in buffer
+vim.keymap.set("x", "<leader>p", [["_dP]])         -- when copy above selection send selection to void buffer and mantain copy in buffer
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]]) -- delete into the void buffer
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]]) -- copy to clipboard
-vim.keymap.set("n", "<leader>Y", [["+Y]])        -- copy to clipboard
+vim.keymap.set("n", "<leader>Y", [["+Y]])          -- copy to clipboard
 
 -- SEARCH --
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
 
 -- REMOVE KEYMAP --
 vim.keymap.set("n", "Q", "<nop>") -- remove Q

@@ -17,6 +17,12 @@ require('nvim-surround').setup({ -- https://github.com/kylechui/nvim-surround
 			add = function()
 				return { { "`" }, { "`" } }
 			end
+		},
+		-- Add alias for backticks + curlybracets
+		["c"] = {
+			add = function()
+				return { { "{`" }, { "`}" } }
+			end
 		}
 	},
 })

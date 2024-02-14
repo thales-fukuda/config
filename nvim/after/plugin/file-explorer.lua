@@ -19,7 +19,7 @@ require("nvim-tree").setup({ -- https://github.com/nvim-tree/nvim-tree.lua
 		group_empty = true,
 	},
 	filters = {
-		dotfiles = true,
+		dotfiles = false,
 	},
 })
 
