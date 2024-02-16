@@ -36,7 +36,12 @@ snippet at "field"
 	${1: value}: ${2:any}
 
 snippet fun "function" 
-	function ${1: name}(${2:value}: ${3: arg}) {
+	function ${1: name}(${2:value}: ${3: arg}):${4: returntype} {
+		${0}
+	}
+
+snippet efun "export function" 
+	export function ${1: name}(${2:value}:${3: arg}):${4: returntype}{
 		${0}
 	}
 
@@ -68,4 +73,25 @@ snippet map "map"
 snippet foreach "foreach"
 	${1:arr}.forEach((${2:element}) => ${3:return})
 
+snippet dsc "describe"
+	describe("${1}", () => {
+		${2}
+	})
+
+snippet tst "test"
+	test("${1}", () => {
+		${2}
+	})
+
+snippet exp "expect"
+	expect(${1}).${2}
+
+snippet mtxn "number matrix"
+	number[][]
+
+snippet mtxs "string matrix"
+	string[][]
+
+snippet mtxb "boolean matrix"
+	boolean[][]
 
