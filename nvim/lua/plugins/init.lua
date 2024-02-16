@@ -12,7 +12,7 @@ return {
 		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 		-- install jsregexp (optional!).
 		build = "make install_jsregexp",
-		event="VeryLazy"
+		event = "VeryLazy"
 	},
 	{ 'saadparwaiz1/cmp_luasnip' },
 	{
@@ -70,4 +70,15 @@ return {
 	{ "EdenEast/nightfox.nvim" },
 	'nvim-treesitter/nvim-treesitter-textobjects',
 	'numToStr/Comment.nvim',
+	{
+		'jesseleite/nvim-noirbuddy',
+		dependencies = {
+			{ 'tjdevries/colorbuddy.nvim', branch = 'dev' }
+		},
+		lazy = false,
+		priority = 1000,
+		opts = {
+			-- All of your `setup(opts)` will go here
+		},
+	}
 }
