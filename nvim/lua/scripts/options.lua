@@ -17,7 +17,8 @@ vim.opt.incsearch = true -- highlight match while typing search pattern
 
 -- SCROLL -- 
 vim.opt.scrolloff = 16 -- minimum nr. of lines above and below cursor
-vim.opt.signcolumn = "yes:1" -- when and how to display the sign column
+vim.opt.signcolumn = "yes:2" -- when and how to display the sign column
+-- vim.opt.foldcolumn = "yes:4"
 
 -- CURSOR --
 vim.opt.cursorline = true -- highlight the screen line of the cursor
