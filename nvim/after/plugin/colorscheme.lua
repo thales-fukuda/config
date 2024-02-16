@@ -2,6 +2,17 @@
 
 -- local nightfox = require("nightfox") -- https://github.com/EdenEast/nightfox.nvim
 --
+local Color, colors, Group, groups, styles = require('colorbuddy').setup {
+	styles = {
+		bold = true,
+		italic = true
+	}
+}
+
+Group.new('TelescopeTitle', colors.primary)
+Group.new('@comment', colors.noir_7, nil, styles.italic)
+
+
 
 -- Nightfox setup
 -- noirbudy.setup({
@@ -46,8 +57,12 @@
 -- -- nvim-tree
 -- vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = bg, fg = "#ffffff" })
 --
--- -- Line number column bg
--- vim.cmd("hi LineNr guibg=NONE")
+-- Line number column bg
+vim.cmd("hi LineNr guibg=NONE")
 --
--- -- Sign column bg
--- vim.cmd("hi SignColumn guibg=NONE")
+-- Sign column bg
+vim.cmd("hi SignColumn guibg=NONE")
+
+--
+Group.new('CursorLineNr', colors.primary, colors.noir_9)
+

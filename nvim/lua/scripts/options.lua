@@ -17,7 +17,14 @@ vim.opt.incsearch = true -- highlight match while typing search pattern
 
 -- SCROLL -- 
 vim.opt.scrolloff = 16 -- minimum nr. of lines above and below cursor
-vim.opt.signcolumn = "yes:2" -- when and how to display the sign column
+
+-- SIGN COlUMN --
+vim.opt.signcolumn = "yes:3" -- when and how to display the sign column
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
 -- vim.opt.foldcolumn = "yes:4"
 
 -- CURSOR --
@@ -28,6 +35,5 @@ vim.opt.cursorlineopt = "number" -- settings for 'cursorline'
 vim.opt.isfname:append("@-@") -- characters included in file names and pathnames
 vim.opt.updatetime = 50 -- after this many milliseconds flush swap file
 vim.opt_local.cmdheight = 0 -- number of lines to use for the command-line
-
 
 
